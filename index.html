@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-sclae=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="homelogo.png" class="logo"
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#courses">Courses</a></li>
+          </ul>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="header-text">
+          <p>Osi Amaefule's E-Portfolio</p>
+            <h1>First, solve the problem. Then, write the code.- <span>John Johnson</span></h1>
+        </div>
+      </div>
+    </div>
+    <!----------about--------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="propicture.png">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Have you ever watched a Marvel movie and thought, <i>what super power would I want, if possible?</i> 
+              Some might say they want the ability to fly, while others might say invisibility. 
+              I, on the other hand, want the super power of computer programming. 
+              Programming is not only a super power, but an art. 
+              In my years of programming I've learned to not only converse with a computer, 
+              but solve problems in the most efficient way possible, with the added bonus of enhancement of the solution over time. 
+              Knowing that it is possible to create something out of nothing is the best super power to have. 
+              Who wouldn't want that?</p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('certifications')">Certifications</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('links')">Links</p>
+            </div>
+            <div class="tab-contents active-tab" id="certifications">
+              <ul>
+                <li><span>Computer Programming</span><br>Creating instructions for a computer to execute.</li>
+                <li><span>Application Development</span><br>Developing desktop applicaiton software.</li>
+                <li><span>System and Hardware</span><br>Maintaining and repairing hardware systems.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>August 2020-December 2022</span><br>Office Manager at Goldsboro Quick Care.</li>
+                <li><span>January 2022-September 2022</span><br>Assistant Manager at Hibbetts Sports.</li>
+                <li><span>2019-2020</span><br>Team Lead at Lowes.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2021-2023</span><br>AAS in computer programming from Wayne Community College.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="links">
+              <ul>
+                <li><span>Resume</span><br><a href="https://docs.google.com/document/d/1bwdRIHDsi2IQ9AzDEJXE4DlJGb1hN486f2j-Ywe1m5o/edit#heading=h.a5ac7o1i7dy" style="color: white;">Click here to view my Resume.</a></li>
+                <li><span>LinkedIn</span><br><a href="https://www.linkedin.com/in/osiamaefule/" style="color: white;">Click here to view my LinkedIn.</a></li>
+                <li><span>Github</span><br><a href="https://github.com/OsiAmaefule" style="color: white;">Click here to view my Github.</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      
+      function opentab(tabname) {
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+      }
+
+    </script>
+    </body>
+    
+
+    <!----------contact----------->
+    <div id="contact">
+      <div class="container">
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbyEcDqeNU1EX-ILDkrIQnBwEjI512HIZZ4ZrtO_QJJoOJ6N54pFWM7BJDIQvDrdJ3d7GQ/exec">
+          <h1 class="sub-title">Contact Me</h1>
+      
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="username" placeholder="Your name..">
+
+          <label for="email">Enter your email</label>
+          <input type="text" id="email" name="email" placeholder="Your email address..">
+      
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Type message here.." style="height:200px"></textarea>
+      
+          <button type="submit" class="btn btn2">Submit</button>
+      
+        </form>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>Copyright © Osi Amaefule</p>
+    </div>
+
+<!----------Completed Courses--------->
+
+<div id="courses">
+  <div class="container">
+    <h1 class="sub-title">Completed Courses</h1>
+    <br>
+    <br>
+    <table class="center">
+      <tr>
+        <th>Course Name</th>
+        <th>Course Number</th>
+        <th>Course Link</th>
+      </tr>
+      <tr>
+        <td>Java Programming</td>
+        <td>CSC-151-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/csc/100/csc-151/" style="color: blue;">Java Programming Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Hardware and Software Support</td>
+        <td>CTS-121-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/cts/100/cts-120/" style="color: blue;">Hardware and Software Support Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Mobile Application Development I</td>
+        <td>WEB-151-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/web/100/web-151/" style="color:blue;">Mobile Application Development I Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Python Programming</td>
+        <td>CSC-121-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/csc/100/csc-121/" style="color:blue">Python Programming Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Network and Security Foundation</td>
+        <td>CTI-120-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/cti/100/cti-120/" style="color: blue;">Network and Security Foundation Course Link</a></td>
+      </tr>
+      <tr>
+        <td>System Analysis and Design</td>
+        <td>CTS-285-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/cts/200/cts-285/" style="color: blue">System Analysis and Design Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Advanced Java Programming</td>
+        <td>CSC-251-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/csc/200/csc-251/" style="color: blue;">Advanced Java Programming Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Database Programming I</td>
+        <td>DBA-120-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/dba/100/dba-120/" style="color: blue;">Database Programming I Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Web Markup and Scripting</td>
+        <td>WEB-115-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/web/100/web-115/" style="color: blue;">Web Markup and Scripting Course Link</a></td>
+      </tr>
+      <tr>
+        <td>PHP Programming</td>
+        <td>WEB-182-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/web/100/web-182/" style="color: blue;">PHP Programming Course Link</a></td>
+      </tr>
+      <tr>
+        <td>C++ Programming</td>
+        <td>CSC-134-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/csc/100/csc-134/" style="color: blue;">C++ Programming Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Web, Programming, and Database Foundation</td>
+        <td>CTI-110-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/cti/100/cti-110/" style="color: blue">Web, Programming, and Database Foundation Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Info System Business Concepts</td>
+        <td>CTS-115-IN02</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/cts/100/cts-115/" style="color: blue;">Info System Business Concepts Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Intro to Web Graphics</td>
+        <td>WEB-111-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/web/100/web-111/" style="color: blue;">Intro to Web Graphics Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Cloud Application Development</td>
+        <td>CSC-227-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/csc/200/csc-227/" style="color: blue;">Cloud Application Development Course Link</a></td>
+      </tr>
+      <tr>
+        <td>Programming Capstone Project</td>
+        <td>CSC-289-IN01</td>
+        <td><a href="https://waynecc.smartcatalogiq.com/en/2022-2023/general-catalog-and-student-handbook/course-descriptions/csc/200/csc-289/" style="color: blue;">Programming Capstone Project Course Link</a></td>
+      </tr>
+
+
+    </table>
+
+  </div>
+</div>
